@@ -1,13 +1,12 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+public class Translator {
 
-class Translator
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		Scanner scan = new Scanner(System.in);
-		String inputJsonString = scan.nextLine();
+	public static void main(String[] args) throws java.lang.Exception {
+		String inputJsonString = "";
+		inputJsonString = "Hello World";
 		System.out.println(inputJsonString);
+		 byte[] byteCode = inputJsonString.getBytes();
+		
+		System.out.println(byteCode);
+		
 	}
 }
