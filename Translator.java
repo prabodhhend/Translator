@@ -9,17 +9,29 @@ public class Translator {
 		String inputJsonString = "";
 		inputJsonString = "{\"text\":\"Hello World\",\"language\":\"mandarin\"}";
 		Gson gson = new Gson();
-		Type type = new TypeToken<TranslatorInputClass>() {}.getType();
+		Type type = new TypeToken<TranslatorInputClass>() {
+		}.getType();
 		TranslatorInputClass jsonObject = gson.fromJson(inputJsonString, type);
-		System.out.println(jsonObject.getLanguage());
-		
-		
-		byte[] byteCode = inputJsonString.getBytes();
+		try {
+			if (LanguageDictionary.values().equals(jsonObject.getLanguage().toString())) {
+				System.out.println("heee");
 
-		String country = "";
-		String lang = "eng";
-		Locale localeVariable = new Locale(lang, country);
-		System.out.println(localeVariable.getCountry());
+				byte[] byteCode = inputJsonString.getBytes();
 
+				String country = "";
+				String lang = "eng";
+				Locale localeVariable = new Locale(lang, country);
+				System.out.println(localeVariable.getCountry());
+			} else {
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static Object LanguageDictionary() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
