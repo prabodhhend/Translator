@@ -7,5 +7,5 @@
  */
 public enum LanguageDictionary {
 
-	England(), France(), China(), Japan(), India();
+	England(), France(), China(), Japan(), India(), mandarin();
 }
